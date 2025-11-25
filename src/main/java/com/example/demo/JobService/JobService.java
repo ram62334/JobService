@@ -6,5 +6,5 @@ public interface JobService {
     List<Job> findAll();
     void add(Job job);
 
-    Job getJobByid(int id);
+    Job getJobByid(Long id);
 }

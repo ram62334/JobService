@@ -32,7 +32,7 @@ public class JobController {
 //   to get job by id
 //    if i use return type as Job then if id not found it will return null and http status will be '200 OK' which is not very informative
     @GetMapping("/jobs/{id}")
-    public ResponseEntity<Job> getById(@PathVariable int id){
+    public ResponseEntity<Job> getById(@PathVariable Long id){
         Job j=js.getJobByid(id);
         if (j!=null)
             return new ResponseEntity<>(j, HttpStatus.OK);
